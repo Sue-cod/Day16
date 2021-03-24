@@ -8,8 +8,8 @@ exports.firstName = firstName;
 
 
 function lastName(lastName) {
-    return lastName.toUpperCase();
+    return lastName.toLowerCase();
 }
 
-console.log("lastName".toUpperCase());
+console.log("lastName".toLowerCase());
 exports.lastName = lastName;
