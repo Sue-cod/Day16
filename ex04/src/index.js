@@ -1,26 +1,23 @@
 // Only change code below this line
 class Pets {
     constructor(name, legs) {
-        this.name = name;
-        this.legs = legs;
+      this._name = name;
+      this._legs = legs;
     }
-
-walk(numberOfLegs) {
-   console.log('${this._name} is walking on ${this._legs}');   
+    walk() {
+      let numberOfLegs = `${this._name} is walking on ${this._legs} legs`;
+      return numberOfLegs;
     }
-}
-
-class Dog extends Pets {
+  }
+  class Dog extends Pets {
     constructor(name, legs) {
-        super(name);
-        this.legs = legs;
+      super(name, legs);
     }
-    
     bark() {
-        let dogSay = "Pujdo says WUF-WUF";
-        return dogSay;
+      let dogSay = `${this._name} says WUF-WUF`;
+      return dogSay;
     }
-}
+  }
 
 // Only change code above this line
 

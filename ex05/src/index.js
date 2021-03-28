@@ -1,50 +1,33 @@
 // Only change code below this line
 class Microsoft {
-constructor(name) {
-    this._name = name;
-}
-get name() {
-    
-} 
-
-set name(name) {
- this._name = name;
-}
-
-occupation() {
-    return '${name} is a philanthropist!';
-}
-
-henry() {
-    henry.occupation();
-    console.log("William Henry Gates III");
-}
-
-}
-
-class Facebook {
-constructor(name, age) {
-    this._name = name;
-    this._age = age;
-}
-
-studentAge() {
-    return '${name} is ${age}';
-}
-elliot() {
-    console.log("Mark Elliot Zuckerberg", 23);
-    elliot.occupation();
-    elliot.studentAge();
-}
-}
-
-class Microsoft extends Facebook {
-    constructor(name, age) {
-        super(name, age);
-
+    constructor(name) {
+      this._name = name;
     }
-}
-
+    get name() {
+      return this._name;
+    }
+    set name(newName) {
+      this._name = newName;
+    }
+    occupation() {
+      return `${this.name} is a philanthropist!`;
+    }
+  }
+  class Facebook extends Microsoft {
+    constructor(name, age) {
+      super(name);
+      this._age = age;
+    }
+    studentAge() {
+      return `${this._name} is ${this._age}`;
+    }
+  }
+  
+  let henry = new Microsoft('William Henry Gates III');
+  console.log(henry.occupation());
+  let elliot = new Facebook('Mark Elliot Zuckerberg', 23);
+  console.log(elliot.occupation());
+  console.log(elliot.studentAge());
 // Only change code above this line
 module.exports = {
     Microsoft,

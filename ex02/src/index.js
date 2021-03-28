@@ -13,7 +13,6 @@ class Book {
 
 }
 
-
 // Only change code above this line
 
 const littlePrince = new Book("The Little Prince"); // Change this line
